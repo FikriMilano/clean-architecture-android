@@ -71,6 +71,5 @@ dependencies {
 
     implementation "net.zetetic:android-database-sqlcipher:$sqlchiper_version"
     implementation "androidx.sqlite:sqlite-ktx:$sqlite_ktx_version"
-
     debugImplementation "com.amitshekhar.android:debug-db:$debugdb_version"
 }
