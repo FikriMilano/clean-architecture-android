@@ -19,10 +19,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
 
-        buildConfigField 'String', 'API_KEY', "\"token e0cd3cb1ae0c352504b37a8c20ef6ff9159428b4\""
         buildConfigField 'String', 'BASE_URL', "\"https://api.github.com/\""
     }
-
+    buildTypes.each {
+        it.buildConfigField 'String', 'API_KEY', API_KEY
+    }
     buildTypes {
         release {
             minifyEnabled true
