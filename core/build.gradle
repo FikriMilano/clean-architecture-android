@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
-    id 'de.mannodermaus.android-junit5'
 }
 apply from: '../shared_dependencies.gradle'
 
@@ -18,36 +17,20 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        testInstrumentationRunnerArgument "runnerBuilder", "de.mannodermaus.junit5.AndroidJUnit5Builder"
         consumerProguardFiles "consumer-rules.pro"
 
-        buildConfigField 'String', 'API_KEY', "\"token 1f86f3a2e7360e2e52f41f3c9de2c6cfd13c4d9f\""
+        buildConfigField 'String', 'API_KEY', "\"token 4855302124050bfef692545d93e9d77494852ac4\""
         buildConfigField 'String', 'BASE_URL', "\"https://api.github.com/\""
     }
 
     buildTypes {
         release {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'consumer-rules.pro'
         }
         debug {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    sourceSets.each {
-        it.java.srcDirs += "src/$it.name/kotlin"
-    }
-    testOptions {
-        junitPlatform {
-            filters {
-                engines {
-                    include 'spek2'
-                }
-            }
-        }
-        unitTests.all {
-            testLogging.events = ["passed", "skipped", "failed"]
+            consumerProguardFiles 'consumer-rules.pro'
         }
     }
     compileOptions {

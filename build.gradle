@@ -33,11 +33,6 @@ buildscript {
 
     ext.leakcanary_version = "2.4"
     ext.idlingresource_version = "3.3.0"
-    ext.spek_version = "2.0.13"
-    ext.testrunner_version = "1.2.0"
-
-    ext.mockitoinline_version = "3.0.0"
-    ext.mockitokotlin_version = "2.2.0"
 
     ext.sqlchiper_version = "4.4.0"
     ext.sqlite_ktx_version = "2.1.0"

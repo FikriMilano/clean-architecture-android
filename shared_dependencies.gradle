@@ -25,14 +25,4 @@ dependencies {
 
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
     implementation "androidx.test.espresso:espresso-idling-resource:$idlingresource_version"
-
-    testImplementation "org.spekframework.spek2:spek-dsl-jvm:$spek_version"
-    testImplementation "org.spekframework.spek2:spek-runner-junit5:$spek_version"
-    androidTestRuntimeOnly "de.mannodermaus.junit5:android-test-runner:$testrunner_version"
-
-    testImplementation "org.mockito:mockito-inline:$mockitoinline_version"
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitokotlin_version"
-
-    // assert
-    testImplementation "org.jetbrains.kotlin:kotlin-test-junit5:$kotlin_version"
 }
