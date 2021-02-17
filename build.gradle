@@ -39,7 +39,6 @@ buildscript {
     ext.debugdb_version = "1.0.6"
 
 
-
     repositories {
         google()
         jcenter()
