@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Github</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_title">Home</string>
+    <string name="title_menu">Favorite</string>
+    <string name="error_desc">Koneksi internetmu terganggu</string>
+    <string name="error_subtitle">Silahkan coba lagi</string>
+    <string name="error_retry">Coba Lagi</string>
+    <string name="empty_search_desc">Maaf, user tidak ketemu</string>
+    <string name="empty_search_subtitle">Silahkan masukan username lain</string>
+    <string name="empty_favorite_desc">User panutan masih kosong</string>
+    <string name="empty_favorite_subtitle">Yuk, mulai isi koleksimu</string>
+    <string name="empty_retry">Jelajahi User</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorited">Favorited</string>
+    <string name="company">Company</string>
+    <string name="blog">Blog</string>
+    <string name="repositories">Repositories</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="user_info">User Info</string>
+    <string name="location">Location</string>
+    <string name="email">Email</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="search_users">Search users</string>
+    <string name="welcome_subtitle">Yuk, mulai mencari!</string>
+    <string name="welcome_desc">Cari user panutanmu</string>
+</resources>

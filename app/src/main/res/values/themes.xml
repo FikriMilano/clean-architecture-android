@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Github" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Github.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:background">@drawable/bg_pale_grey_rounded</item>
+        <item name="searchIcon">@drawable/ic_baseline_search_24</item>
+        <item name="closeIcon">@drawable/ic_baseline_close_24</item>
+        <item name="android:editTextColor">@color/charcoal_grey</item>
+        <item name="android:textColorHint">@color/battleship_grey</item>
+        <item name="queryHint">@string/search_users</item>
+    </style>
+
+    <style name="Theme.Github.TextView.Subtitle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/battleship_grey</item>
+    </style>
+
+    <style name="Theme.Github.Button.UnelevatedButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:backgroundTint">@color/blue</item>
+    </style>
+
+    <style name="Theme.Github.Background.White" parent="android:Theme">
+        <item name="android:background">@color/white</item>
+    </style>
+
+</resources>

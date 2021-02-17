@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailUserFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:background="@color/white"
+                android:paddingBottom="48dp"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_marginTop="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@color/battleship_grey" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="48dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+                    tools:text="Jake Wharton" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Theme.Github.TextView.Subtitle"
+                    app:layout_constraintEnd_toEndOf="@id/tv_name"
+                    app:layout_constraintStart_toStartOf="@id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name"
+                    tools:text="JakeWharton" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/btn_toggle_group_favorite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_username"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_favorite"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/favorite"
+                        android:textColor="@color/blue"
+                        app:backgroundTint="@color/white"
+                        app:strokeColor="@color/mtrl_btn_stroke_color_selector"
+                        app:strokeWidth="1dp" />
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView
+                    android:id="@+id/tv_nametag_repo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repositories"
+                    android:textAppearance="@style/Theme.Github.TextView.Subtitle"
+                    app:layout_constraintStart_toStartOf="@id/btn_toggle_group_favorite"
+                    app:layout_constraintTop_toBottomOf="@id/tv_repo" />
+
+                <TextView
+                    android:id="@+id/tv_repo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/tv_nametag_repo"
+                    app:layout_constraintStart_toStartOf="@id/tv_nametag_repo"
+                    app:layout_constraintTop_toBottomOf="@id/btn_toggle_group_favorite"
+                    tools:text="125" />
+
+                <TextView
+                    android:id="@+id/tv_nametag_follower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/followers"
+                    android:textAppearance="@style/Theme.Github.TextView.Subtitle"
+                    app:layout_constraintEnd_toStartOf="@id/tv_nametag_following"
+                    app:layout_constraintStart_toEndOf="@id/tv_nametag_repo"
+                    app:layout_constraintTop_toBottomOf="@id/tv_follower" />
+
+                <TextView
+                    android:id="@+id/tv_follower"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/tv_nametag_follower"
+                    app:layout_constraintStart_toStartOf="@id/tv_nametag_follower"
+                    app:layout_constraintTop_toBottomOf="@id/btn_toggle_group_favorite"
+                    tools:text="147" />
+
+                <TextView
+                    android:id="@+id/tv_nametag_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/following"
+                    android:textAppearance="@style/Theme.Github.TextView.Subtitle"
+                    app:layout_constraintEnd_toEndOf="@id/btn_toggle_group_favorite"
+                    app:layout_constraintTop_toBottomOf="@id/tv_following" />
+
+                <TextView
+                    android:id="@+id/tv_following"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/tv_nametag_following"
+                    app:layout_constraintStart_toStartOf="@id/tv_nametag_following"
+                    app:layout_constraintTop_toBottomOf="@id/btn_toggle_group_favorite"
+                    tools:text="30284" />
+
+                <TextView
+                    android:id="@+id/tv_user_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="48dp"
+                    android:text="@string/user_info"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_nametag_repo" />
+
+                <TextView
+                    android:id="@+id/tv_nametag_company"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/company"
+                    android:textAppearance="@style/Theme.Github.TextView.Subtitle"
+                    app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="@id/tv_user_info"
+                    app:layout_constraintTop_toTopOf="@id/tv_company" />
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="24dp"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/tv_user_info"
+                    tools:text="Square" />
+
+                <TextView
+                    android:id="@+id/tv_nametag_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/location"
+                    android:textAppearance="@style/Theme.Github.TextView.Subtitle"
+                    app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="@id/tv_nametag_company"
+                    app:layout_constraintTop_toTopOf="@id/tv_location" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="24dp"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/tv_company"
+                    tools:text="San Francisco" />
+
+                <TextView
+                    android:id="@+id/tv_nametag_blog"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/blog"
+                    android:textAppearance="@style/Theme.Github.TextView.Subtitle"
+                    app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="@id/tv_nametag_location"
+                    app:layout_constraintTop_toTopOf="@id/tv_blog" />
+
+                <TextView
+                    android:id="@+id/tv_blog"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="24dp"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/tv_location"
+                    tools:text="https://jakewharton.com" />
+
+                <TextView
+                    android:id="@+id/tv_nametag_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/email"
+                    android:textAppearance="@style/Theme.Github.TextView.Subtitle"
+                    app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="@id/tv_nametag_blog"
+                    app:layout_constraintTop_toTopOf="@id/tv_email" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="24dp"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/tv_blog"
+                    tools:text="jakewharton@gmail.com" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vertical_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include
+        android:id="@+id/progress_bar"
+        layout="@layout/view_detail_user_loading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/view_error"
+        layout="@layout/view_error"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="?actionBarSize"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
