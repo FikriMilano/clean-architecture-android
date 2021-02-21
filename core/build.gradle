@@ -6,6 +6,10 @@ plugins {
 }
 apply from: '../shared_dependencies.gradle'
 
+def apikeyPropertiesFile = rootProject.file("apikey.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -19,12 +23,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
 
-        buildConfigField 'String', 'BASE_URL', "\"https://api.github.com/\""
-    }
-    buildTypes.each {
-        it.buildConfigField 'String', 'KEY_1', KEY_1
-        it.buildConfigField 'String', 'KEY_2', KEY_2
-        it.buildConfigField 'String', 'KEY_3', KEY_3
+        buildConfigField 'String', 'BASE_URL', BASE_URL
+        buildConfigField("String", 'API_KEY', apikeyProperties['API_KEY'])
     }
     buildTypes {
         release {
