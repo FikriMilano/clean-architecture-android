@@ -34,6 +34,7 @@ You need to generate your own Github Api Key first, then set it up as your envir
 7. Input "token your-github-api-key" in Variable value
 8. Click "Ok"
 9. Click "Ok"
+10. Run the app
 
 ### Mac
 Try this:
