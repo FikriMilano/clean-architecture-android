@@ -1,6 +1,8 @@
 # Clean Architecture Android - Github App
 [![fmilano2019](https://circleci.com/gh/fmilano2019/clean-architecture-android.svg?style=shield)](https://circleci.com/gh/fmilano2019/clean-architecture-android)
 
+Sample of clean architecture in Android with Retrofit + Room + Coroutines + Flow + Dagger2.
+
 Submission project for Kelas Menjadi Android Developer Expert at Dicoding.
 
 ## Security
