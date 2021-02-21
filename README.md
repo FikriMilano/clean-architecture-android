@@ -31,7 +31,7 @@ You need to generate your own Github Api Key first, then set it up as your envir
 4. Click "Environment Variables..."
 5. Click "New" in User variables
 6. Input "GITHUB_API_KEY" in Variable name
-7. Input "your-github-api-key" in Variable value
+7. Input "token your-github-api-key" in Variable value
 8. Click "Ok"
 9. Click "Ok"
 
