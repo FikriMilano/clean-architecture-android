@@ -22,7 +22,7 @@ Submission project for Kelas Menjadi Android Developer Expert at Dicoding.
 * Moshi - JSON Parser
 
 ## Setup
-You need to generate your own Github Api Key first.
+You need to generate your own Github Api Key first, then set it up as your environment variables.
 
 ### Windows
 1. Open Settings
