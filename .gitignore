@@ -13,5 +13,6 @@
 /captures
 .externalNativeBuild
 .cxx
+core/src/main/java/com/example/github/core/utils/ApiConfig.kt
 local.properties
 apikey.properties

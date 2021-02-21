@@ -6,9 +6,9 @@ plugins {
 }
 apply from: '../shared_dependencies.gradle'
 
-def apikeyPropertiesFile = rootProject.file("apikey.properties")
-def apikeyProperties = new Properties()
-apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+//def apikeyPropertiesFile = rootProject.file("apikey.properties")
+//def apikeyProperties = new Properties()
+//apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 
 android {
     compileSdkVersion 30
@@ -24,7 +24,7 @@ android {
         consumerProguardFiles "consumer-rules.pro"
 
         buildConfigField 'String', 'BASE_URL', BASE_URL
-        buildConfigField("String", 'API_KEY', apikeyProperties['API_KEY'])
+//        buildConfigField("String", 'API_KEY', apikeyProperties['API_KEY'])
     }
     buildTypes {
         release {
