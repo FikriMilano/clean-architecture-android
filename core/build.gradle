@@ -6,10 +6,6 @@ plugins {
 }
 apply from: '../shared_dependencies.gradle'
 
-//def apikeyPropertiesFile = rootProject.file("apikey.properties")
-//def apikeyProperties = new Properties()
-//apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
-
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
