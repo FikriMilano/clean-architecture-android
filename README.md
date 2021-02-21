@@ -4,19 +4,19 @@
 Submission project for my Kelas Menjadi Android Developer Expert at Dicoding.
 
 ## Security
-* Obfuscation
-* Encryption
-* Certificate Pinning
+* Obfuscation - Proguard
+* Encryption - SQLChiper
+* SSL Pinning - OkHttp Certificate Pinner
 
 ## Libraries
-* Retrofit
-* Dagger2
-* Glide
-* Courotines
-* Kotlin Flow
-* Room
-* SQLChiper
-* Navigation Component
-* Shimmer
-* OkHttp
-* Moshi
+* Retrofit - REST Client
+* Dagger2 - Dependency Injection
+* Glide - Image Loader
+* Courotines - Execute Asynchrounus Code
+* Kotlin Flow - Process Asynchrounus Data Stream (ReactiveX)
+* Room - Local Database
+* SQLChiper - Database Encryption
+* Navigation Component - Navigate
+* Shimmer - Shimmer Effect
+* OkHttp - HTTP network requests
+* Moshi - JSON Parser
