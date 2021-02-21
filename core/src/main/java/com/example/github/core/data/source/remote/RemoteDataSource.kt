@@ -17,7 +17,8 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
 
     suspend fun getListUser(): Flow<ApiResponse<List<UserResponse>>> = flow {
         try {
-            val response = apiService.getListUser(BuildConfig.API_KEY)
+            val response =
+                apiService.getListUser(BuildConfig.KEY_1 + BuildConfig.KEY_2 + BuildConfig.KEY_3)
 
             if (response.isNotEmpty())
                 emit(ApiResponse.Success(response))
@@ -32,7 +33,10 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
 
     suspend fun getDetailUser(username: String): Flow<ApiResponse<UserResponse>> = flow {
         try {
-            val response = apiService.getDetailUser(BuildConfig.API_KEY, username)
+            val response = apiService.getDetailUser(
+                BuildConfig.KEY_1 + BuildConfig.KEY_2 + BuildConfig.KEY_3,
+                username
+            )
 
             if (response.username != null)
                 emit(ApiResponse.Success(response))
@@ -47,7 +51,11 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
 
     suspend fun getSearchListUser(username: String): Flow<ApiResponse<List<UserResponse>>> = flow {
         try {
-            val response = apiService.getSearchListUser(BuildConfig.API_KEY, username, 5)
+            val response = apiService.getSearchListUser(
+                BuildConfig.KEY_1 + BuildConfig.KEY_2 + BuildConfig.KEY_3,
+                username,
+                5
+            )
 
             if (response.listUser.isNotEmpty())
                 emit(ApiResponse.Success(response.listUser))

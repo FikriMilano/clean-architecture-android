@@ -22,7 +22,9 @@ android {
         buildConfigField 'String', 'BASE_URL', "\"https://api.github.com/\""
     }
     buildTypes.each {
-        it.buildConfigField 'String', 'API_KEY', API_KEY
+        it.buildConfigField 'String', 'KEY_1', KEY_1
+        it.buildConfigField 'String', 'KEY_2', KEY_2
+        it.buildConfigField 'String', 'KEY_3', KEY_3
     }
     buildTypes {
         release {
