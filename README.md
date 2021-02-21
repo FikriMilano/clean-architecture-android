@@ -1,7 +1,7 @@
 # Clean Architecture Android - Github App
 [![fmilano2019](https://circleci.com/gh/fmilano2019/clean-architecture-android.svg?style=shield)](https://circleci.com/gh/fmilano2019/clean-architecture-android)
 
-Submission project for my Kelas Menjadi Android Developer Expert at Dicoding.
+Submission project for Kelas Menjadi Android Developer Expert at Dicoding.
 
 ## Security
 * Obfuscation - Proguard
@@ -20,3 +20,21 @@ Submission project for my Kelas Menjadi Android Developer Expert at Dicoding.
 * Shimmer - Shimmer Effect
 * OkHttp - HTTP network requests
 * Moshi - JSON Parser
+
+## Setup
+You need to generate your own Github Api Key first.
+
+### Windows
+1. Open Settings
+2. Search "Edit Environment Variables"
+3. Click "Advanced"
+4. Click "Environment Variables..."
+5. Click "New" in User variables
+6. Input "GITHUB_API_KEY" in Variable name
+7. Input "your-github-api-key" in Variable value
+8. Click "Ok"
+9. Click "Ok"
+
+### Mac
+Try this:
+https://medium.com/@youngstone89/setting-up-environment-variables-in-mac-os-28e5941c771c
