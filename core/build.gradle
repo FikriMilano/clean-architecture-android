@@ -25,6 +25,7 @@ android {
 
         buildConfigField 'String', 'BASE_URL', BASE_URL
 //        buildConfigField("String", 'API_KEY', apikeyProperties['API_KEY'])
+        buildConfigField 'String', 'API_KEY', "\"$System.env.GITHUB_API_KEY\""
     }
     buildTypes {
         release {
